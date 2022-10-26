@@ -1,0 +1,79 @@
+*,
+::after,
+::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+html {
+    background: #333;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+
+.container div {
+    display: inline-block;
+}
+
+
+.container div {
+    height: 20px;
+    width: 20px;
+    background-image: linear-gradient( 45deg, rgb(33, 93, 110),
+            rgb(8, 115, 127),
+            rgb(0, 137, 138),
+            rgb(8, 159, 143),
+            rgb(57, 180, 142),
+            rgb(100, 201, 135),
+            rgb(146, 220, 126),
+            rgb(196, 236, 116),
+            rgb(250, 250, 110));
+    background-position: left;
+    background-size: 500%;
+    border-radius: 10%;
+    animation: spin 1.5s linear infinite;
+}
+
+.container div:nth-child(1) {
+    animation-delay: 0.25s;
+}
+
+.container div:nth-child(2) {
+
+    animation-delay: 0.50s;
+}
+
+
+.container div:nth-child(3) {
+    animation-delay: .75s;
+}
+
+.container div:nth-child(4) {
+    animation-delay: 1s;
+}
+
+.container div:nth-child(5) {
+    animation-delay: 1.25s;
+}
+
+
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg) translateX(-150%);
+    }
+
+    50%,
+    100% {
+        transform: rotate(360deg) translateX(-150%);
+    }
+}
